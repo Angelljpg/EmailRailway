@@ -1,0 +1,25 @@
+# Ignorar node_modules en todos los niveles
+node_modules/
+
+# Ignorar archivos de dependencias
+package-lock.json
+yarn.lock
+
+# Ignorar archivos del entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Ignorar archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar archivos de construcción
+dist/
+build/
+
+# Ignorar archivos .rar
+*.rar

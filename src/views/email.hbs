@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido(a)</title>
+    <style>
+        /* Variables de color */
+        :root {
+            --bg-light: #f4f4f4;
+            --text-light: #333;
+            --card-light: #ffffff;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --header-light: #173c2b;
+            --footer-light: #4c4c4c;
+
+            --bg-dark: #1a1a1a;
+            --text-dark: #eaeaea;
+            --card-dark: #222;
+            --shadow-dark: rgba(255, 255, 255, 0.1);
+            --header-dark: #444;
+            --footer-dark: #333;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: var(--card-light);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px var(--shadow-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Modo oscuro */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--bg-dark);
+                color: var(--text-dark);
+            }
+            .container {
+                background: var(--card-dark);
+                box-shadow: 0 0 10px var(--shadow-dark);
+            }
+            .header {
+                background: var(--header-dark);
+            }
+            .footer {
+                background: var(--footer-dark);
+            }
+        }
+
+        .header {
+            display: flex;
+            justify-content: center; /* Centrar los logos */
+            align-items: center;
+            gap: 20px; /* Espacio entre los logos */
+            padding: 10px;
+            background: var(--header-light);
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+
+        .header img {
+            max-height: 40px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            color: var(--text-light);
+        }
+
+        .content p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        /* Botón de acción */
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: #007bff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Pie de página */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #ffffff;
+            background: var(--footer-light);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="https://i0.wp.com/utd.edu.mx/wp-content/uploads/2022/07/LOGO-UTD-NUEVO-2022_solo-01.png?fit=1024%2C387&ssl=1" alt="Logo Izquierdo">
+        <img src="https://images.freecreatives.com/wp-content/uploads/2015/04/logo007.png" alt="Logo Derecho">
+    </div>
+
+    <div class="content">
+        <h2>Bienvenido(a), <strong>{{nombre}}</strong>!</h2>
+        <p>Gracias por registrarte en nuestro sistema.</p>
+        <a href="#" class="btn">Acceder a tu cuenta</a>
+    </div>
+
+    <div class="footer">
+        © 2025 ErnestoOrtegaEnterprises.
+    </div>
+</div>
+
+</body>
+</html>

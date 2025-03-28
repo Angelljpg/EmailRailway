@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #f4f4f4;
+        }
+
+        header {
+            width: 100%;
+            height: 10vh;
+            background-color: #263597;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .container h3 {
+            color: #ffc107;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .container p {
+            color: #ddd;
+            font-size: 1rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Bienvenido a Nuestro Sistema</h2>
+    </header>
+
+    <div class="container">
+        <h2>¡Hola!</h2>
+        <h3>{{email}}</h3> <!-- Variable {{email}} será reemplazada -->
+        <p>{{message}}</p> <!-- Variable {{message}} será reemplazada -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
