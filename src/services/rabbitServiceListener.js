@@ -5,17 +5,11 @@ import { sendEmailPass } from '../controller/emailController.js';
 
 dotenv.config();
 
-const RABBITMQ_URL = "amqp://admin:admin@localhost";
+const RABBITMQ_URL = process.env.RABBITMQ_URL || "amqp://admin:admin@localhost";
 
 export async function userEvents() {
     try {
-        const connection = await amqp.connect({
-            protocol: 'amqp',
-            hostname: process.env.RABBITMQ_HOST || 'rabbitmq',
-            port:5672,
-            username: process.env.RABBITMQ_USER || 'user',
-            password: process.env.RABBITMQ_PASSWORD || 'password',
-        });
+        const connection = await amqp.connect(RABBITMQ_URL);
         const channel = await connection.createChannel();
 
         const exchange = 'user_event';
@@ -75,13 +69,7 @@ export async function userEvents() {
 export async function passwordResetEvents() {
     try {
         console.log("Conectando a RabbitMQ para eventos de password reset...");
-        const connection = await amqp.connect({
-            protocol: 'amqp',
-            hostname: process.env.RABBITMQ_HOST || RABBITMQ_URL,
-            port:5672,
-            username: process.env.RABBITMQ_USER || 'admin',
-            password: process.env.RABBITMQ_PASSWORD || 'admin',
-        });
+        const connection = await amqp.connect(RABBITMQ_URL);
         const channel = await connection.createChannel();
 
         const exchange = "password_reset_event";
